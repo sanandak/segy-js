@@ -1,5 +1,4 @@
 # segy-js
-=========
 
 A library to read SU (and eventually SEG-Y) files and return a JSON formatted array of traces.
 
@@ -9,8 +8,8 @@ A library to read SU (and eventually SEG-Y) files and return a JSON formatted ar
 
 ## Usage
 
-  var readSU = require('segy-js').readSU
-  var traces = readSU('filename')
+    var readSU = require('segy-js').readSU
+    var traces = readSU('filename')
 
 ## Tests
 
