@@ -11,7 +11,7 @@ module.exports = {
 
 	if (ntrc !== Math.floor(ntrc))
 	    return({});
-	var trcs = [];
+	var traces = [];
 	for(var i=0; i<ntrc; i++) {
 	    var skip = i*trclen;
 	    var tracl = buf.readUInt32BE(0 + skip);
@@ -27,13 +27,13 @@ module.exports = {
 	    var gx = buf.readUInt32BE(80+ skip);
 	    var gy = buf.readUInt32BE(84+ skip);
 	    var ns = buf.readUInt16BE(114+ skip);
-	    var dt = buf.readUInt16BE(116+ skip);
+	    var dt = buf.readUInt16BE(116+ skip) / 1000.;
 
-	    var data = [];
+	    var samps = [];
 	    for(var j=0; j<ns; j++) {
-		data.push(buf.readFloatBE(240+j*4 + skip));
+		samps.push({t:dt*j, v:buf.readFloatBE(240+j*4 + skip)});
 	    }
-	    trcs.push({
+	    traces.push({
 		tracl:tracl,
 		tracr:tracr,
 		ffid:ffid,
@@ -47,10 +47,10 @@ module.exports = {
 		gx:gx,
 		gy:gy,
 		ns:ns,
-		dt:dt/1000,
-		data:data
+		dt:dt,
+		samps:samps
 	    })
 	}
-	return trcs 
+	return traces; 
     }
 };
