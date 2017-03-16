@@ -1,0 +1,22 @@
+{
+  "name": "segy-js",
+  "version": "1.0.0",
+  "description": "Segy Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sanandak/segy-js.git"
+  },
+  "keywords": [
+    "segy"
+  ],
+  "author": "Sridhar Anandakrishnan <sak@essc.psu.edu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanandak/segy-js/issues"
+  },
+  "homepage": "https://github.com/sanandak/segy-js#readme"
+}
