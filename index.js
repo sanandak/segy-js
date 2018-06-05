@@ -1,4 +1,7 @@
-var fs = require('fs');
+import DataStream from "datastream-js";
+const ds = new DataStream();
+const fs = require('fs');
+
 
 var _getNSDT = function(fname) {
   var buffer = new Buffer(240);

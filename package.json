@@ -1,6 +1,6 @@
 {
   "name": "segy-js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Segy Library",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/sanandak/segy-js/issues"
   },
-  "homepage": "https://github.com/sanandak/segy-js#readme"
+  "homepage": "https://github.com/sanandak/segy-js#readme",
+  "dependencies": {
+    "datastream-js": "^1.0.7"
+  }
 }
